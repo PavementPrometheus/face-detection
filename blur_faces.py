@@ -13,6 +13,8 @@ ap.add_argument("-m", "--model", required=True,
 	help="path to Caffe pre-trained model")
 ap.add_argument("-c", "--confidence", type=float, default=0.5,
 	help="minimum probability to filter weak detections")
+ap.add_argument("-f", "--file",
+	help="filename of file containing images to test")
 args = vars(ap.parse_args())
 
 # load our serialized model from disk
